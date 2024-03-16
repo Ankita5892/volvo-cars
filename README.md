@@ -14,5 +14,5 @@ In the CI stage, continuous integration is performed, where Docker login is conf
 GitHub Repository : https://github.com/Ankita5892/volvo-cars
 App Endpoint : http://ec2-52-16-7-158.eu-west-1.compute.amazonaws.com:8080/
 
-You can fork the repository and modify the JavaScript code to test CI and CD. Once you push your changes, the CI job will trigger, and once CI is completed, the CD job will trigger under Actions. Please check the grammar in the paragraph.
+You can fork the repository and modify the JavaScript code to test CI and CD. Once you push your changes, the CI job will trigger, and once CI is completed, the CD job will trigger under Actions. 
 
