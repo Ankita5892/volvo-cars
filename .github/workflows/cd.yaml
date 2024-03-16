@@ -13,7 +13,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: Pull Docker image
+    - name: Pull Docker image test
       run: sudo docker pull ankita5891/cicd-pipeline:latest
     - name: Delete Old docker container
       run: sudo docker rm -f cicd-pipeline-container || true
