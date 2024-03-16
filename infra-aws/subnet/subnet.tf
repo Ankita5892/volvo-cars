@@ -30,7 +30,7 @@ resource "aws_security_group" "allow_ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["49.36.236.172/32"]
   }
 
   tags = {
@@ -38,3 +38,32 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
+resource "aws_security_group" "http-sg" {
+  vpc_id = var.vpc-value
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "${var.vpc_name}-http-sg"
+  }
+}
+
+resource "aws_security_group" "custom-tcp" {
+  vpc_id = var.vpc-value
+
+  ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "${var.vpc_name}-custom-tcp"
+  }
+}

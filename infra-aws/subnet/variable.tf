@@ -5,7 +5,7 @@ variable "public_subnet_cidr_block" {
 
 variable "availability_zone" {
   description = "Availability Zone for the subnet"
-  default     = "us-east-1a"
+  default     = "eu-west-1a"
 }
 
 variable "vpc_name" {

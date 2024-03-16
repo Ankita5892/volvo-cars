@@ -18,6 +18,11 @@ variable "key_name" {
 variable "ec2-sg" {
 }
 
+variable "ec2-sg2" {
+}
+variable "ec2-sg3" {
+}
+
 variable "subnet-value" {
 
 }

@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     aws = {
@@ -10,8 +9,8 @@ terraform {
 
 provider "aws" {
   region = "eu-west-1"
-  access_key = "AKIA***********"
-  secret_key = "********************"
+  access_key = "ADD_YOURS"
+  secret_key = "ADD_YOURS"
 }
 
 module "vpc" {
@@ -26,10 +25,12 @@ route-table-id = module.vpc.route-table-id
 
 module "ec2_instance" {
   source      = "./ec2"
-  ami_id      = "ami-074254c177d57d640"
+  ami_id      = "ami-0d940f23d527c3ab1"
   instance_type = "t2.micro"
   subnet-value   = module.subnet.subnet-value
   ec2-sg = module.subnet.ec2-sg
+  ec2-sg2 = module.subnet.ec2-sg2
+  ec2-sg3 = module.subnet.ec2-sg3
   key_name    = var.key
 
 
